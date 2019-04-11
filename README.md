@@ -18,12 +18,12 @@ A lightweight markup language.
 | `Code`           | ``` ``Code`` ```    | `` `Code` ``          | `~Code~`        | `<code>Code</code>`       |
 | Super            | `Super^{2}`         | `Super<sup>2</sup>`   | `Super^{2}`     | `Super<sup>2</sup>`       |
 | Sub              | `Sub_{2}`           | `Sub<sub>2</sub>`     | `Sub_{2}`       | `Sub<sub>2</sub>`         |
-| Quote            | `''Quote''`         | `&lsquo;Quote&rsquo;` | `'Quote'`       | `&lsquo;Quote&rsquo;`     |
-| DoubleQuote      | `""DoubleQuote""`   | `&ldquo;DoubleQuote&rdquo;` | `"DoubleQuote"` | `&ldquo;DoubleQuote&rdquo;` |
+| LeftQuote        | `''LQ''`            | `&lsquo;LQ&rsquo;`    | `'LQ'`          | `&lsquo;LQ&rsquo;`        |
+| LeftDoubleQuote  | `""LDQ""`           | `&ldquo;LDQ&rdquo;`   | `"LDQ"`         | `&ldquo;LDQ&rdquo;`       |
 | Link             | `[[text@url]]`      | `[text](url)`         | `[[url][text]]` | `<a href="url">text</a>`  |
-| Ruby             | `[[漢 字\|かん じ]]`  | -                     | -               | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
 | Image            | `[[alt!title!url]]` | `![alt](url "title")` | `[[file:url]]`  | `<img src="url" alt="alt" title="title" />`|
-| LaTeX            | `$$             $$` | -                     | `$           $` |                           |
+| Ruby             | `[[漢 字\|かん じ]]`  | -                     | -               | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
+| TeX              | `$$             $$` | -                     | `$           $` |                           |
 
 ### Line
 
