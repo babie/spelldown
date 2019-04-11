@@ -18,8 +18,8 @@ A lightweight markup language.
 | `Code`           | ``` ``Code`` ```    | `` `Code` ``          | `~Code~`        | `<code>Code</code>`       |
 | Super            | `Super^{2}`         | `Super<sup>2</sup>`   | `Super^{2}`     | `Super<sup>2</sup>`       |
 | Sub              | `Sub_{2}`           | `Sub<sub>2</sub>`     | `Sub_{2}`       | `Sub<sub>2</sub>`         |
-| Quote            | `''Quote''`         | -                     | `'Quote'`       | `&lsquo;Quote&rsquo;`     |
-| DoubleQuote      | `""DoubleQuote""`   | -                     | `"DoubleQuote"` | `&ldquo;DoubleQuote&rdquo;` |
+| Quote            | `''Quote''`         | `&lsquo;Quote&rsquo;` | `'Quote'`       | `&lsquo;Quote&rsquo;`     |
+| DoubleQuote      | `""DoubleQuote""`   | `&ldquo;DoubleQuote&rdquo;` | `"DoubleQuote"` | `&ldquo;DoubleQuote&rdquo;` |
 | Link             | `[[text@url]]`      | `[text](url)`         | `[[url][text]]` | `<a href="url">text</a>`  |
 | Ruby             | `[[漢字\|かん じ]]`   | -                     | -               | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
 | Image            | `[[alt!title!url]]` | `![alt](url "title")` | `[[file:url]]`  | `<img src="url" alt="alt" title="title" />`|
