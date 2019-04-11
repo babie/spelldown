@@ -21,7 +21,7 @@ A lightweight markup language.
 | Quote            | `''Quote''`         | -                     |                 | `‘Quote’`                 |
 | DoubleQuote      | `""DoubleQuote""`   | -                     |                 | `“DoubleQuote”`           |
 | Link             | `[[text@url]]`      | `[text](url)`         | `[[url][text]]` | `<a href="url">text</a>`  |
-| Ruby             | `[[漢字|かん じ]]`    | -                     | -               | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
+| Ruby             | `[[漢字\|かん じ]]`   | -                     | -               | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
 | Image            | `[[alt!title!url]]` | `![alt](url "title")` | `[[file:url]]`  | `<img src="url" alt="alt" title="title" />`|
 | LaTeX            | `$$             $$` | -                     | `$           $` |                           |
 
