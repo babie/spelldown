@@ -19,21 +19,23 @@ A lightweight markup language.
 
 
 ### Inline
-| Content          | Spelldown          | Markdown              | Org             | HTML                      |
-|------------------|--------------------|-----------------------|-----------------|---------------------------|
-| **Strong**       | `**Strong**`       | `**Strong**`          | `**Strong**`    | `<strong>Strong</strong>` |
-| *Emphasis*       | `//Emphasis//`     | `*Emphasis*`          | `/Emphasis/`    | `<em>Emphasis</em>`       |
-| <u>Underline</u> | `__Underline__`    | `<u>Underline</u>`    | `_Underline_`   | `<u>Underline</u>`        |
-| ~~Delete~~       | `~~Delete~~`       | `~~Delete~~`          | `+Delete+`      | `<del>Delete</del>`       |
-| `Code`           | ``` ``Code`` ```   | `` `Code` ``          | `~Code~`        | `<code>Code</code>`       |
-| SuperScript      | `Super^{2}`        | `Super<sup>2</sup>`   | `Super^{2}`     | `Super<sup>2</sup>`       |
-| SubScript        | `Sub_{2}`          | `Sub<sub>2</sub>`     | `Sub_{2}`       | `Sub<sub>2</sub>`         |
-| SingleQuote      | `''Single''`       | `&lsquo;Single&rsquo;`| `'Single'`      | `&lsquo;Single&rsquo;`    |
-| DoubleQuote      | `""Double""`       | `&ldquo;Double&rdquo;`| `"Double"`      | `&ldquo;Double&rdquo;`    |
-| Link             | `[text]@(url)`     | `[text](url)`         | `[[url][text]]` | `<a href="url">text</a>`  |
-| Image            | `[alt]!(url)`      | `![alt](url)`         | `[[file:url]]`  | `<img src="url" alt="alt" />`|
-| Ruby             | `[漢 字]^{かん じ}`  | N/A                   | N/A             | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>`|
-| TeX              | `$$           $$`  | N/A                   | `$           $` |                           |
+| Content     | Spelldown           | Markdown              | Org             | HTML                      |
+|-------------|---------------------|-----------------------|-----------------|---------------------------|
+| **Strong**  | `**Strong**`        | `**Strong**`          | `**Strong**`    | `<strong>Strong</strong>` |
+| *Emphasis*  | `//Emphasis//`      | `*Emphasis*`          | `/Emphasis/`    | `<em>Emphasis</em>`       |
+| Underline   | `__Underline__`     | `<u>Underline</u>`    | `_Underline_`   | `<u>Underline</u>`        |
+| ~~Delete~~  | `~~Delete~~`        | `~~Delete~~`          | `+Delete+`      | `<del>Delete</del>`       |
+| `Code`      | ``` ``Code`` ```    | `` `Code` ``          | `~Code~`        | `<code>Code</code>`       |
+| SuperScript | `Super^{2}`         | `Super<sup>2</sup>`   | `Super^{2}`     | `Super<sup>2</sup>`       |
+| SubScript   | `Sub_{2}`           | `Sub<sub>2</sub>`     | `Sub_{2}`       | `Sub<sub>2</sub>`         |
+| SingleQuote | `''Single''`        | `&lsquo;Single&rsquo;`| `'Single'`      | `&lsquo;Single&rsquo;`    |
+| DoubleQuote | `""Double""`        | `&ldquo;Double&rdquo;`| `"Double"`      | `&ldquo;Double&rdquo;`    |
+| Link        | `[text]@(url)`      | `[text](url)`         | `[[url][text]]` | `<a href="url">text</a>`  |
+| Image       | `[alt]!(url)`       | `![alt](url)`         | `[[file:url]]`  | `<img src="url" alt="alt" />` |
+| Ruby        | `[漢 字]^{かん じ}`   | N/A                   | N/A             | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
+| TeX         | `$$           $$`   | N/A                   | `$           $` |                           |
+| ID/Class    | `[text]=(#id.class)`| N/A                   | N/A             | `<span id="id" class="class">text</span>` |
+
 
 ### Line
 
