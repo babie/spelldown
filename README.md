@@ -150,6 +150,34 @@ term1
 </ul>
 ```
 
+#### Table
+```
+| 1 | 2 | 3 |
+|---|---|---|
+| a | b | c |
+| x | y | z |
+```
+
+```
+<table>
+  <tr>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+  </tr>
+  <tr>
+    <td>a</td>
+    <td>b</td>
+    <td>c</td>
+  </tr>
+  <tr>
+    <td>x</td>
+    <td>y</td>
+    <td>z</td>
+  </tr>
+</table>
+```
+
 #### TeX
 ```
 $$$
