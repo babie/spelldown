@@ -186,9 +186,9 @@ Lorem ipsum[^1]
 ```
 
 ```
-Lorem ipsum<sup><a href="#footnote-1">1</a></sup>
+<p>Lorem ipsum<sup><a href="#footnote-1">1</a></sup></p>
 
-<span id="footnote-1">1. Dummy text</span>
+<p><span id="footnote-1">1. Dummy text</span></p>
 ```
 
 #### TeX
