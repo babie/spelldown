@@ -20,11 +20,11 @@ A lightweight markup language.
 | SubScript        | `Sub_{2}`           | `Sub<sub>2</sub>`     | `Sub_{2}`       | `Sub<sub>2</sub>`         |
 | SingleQuote      | `''Single''`        | `&lsquo;Single&rsquo;`| `'Single'`      | `&lsquo;Single&rsquo;`    |
 | DoubleQuote      | `""Double""`        | `&ldquo;Double&rdquo;`| `"Double"`      | `&ldquo;Double&rdquo;`    |
-| &lt;             | `<`                 | `<`                   | `<`             | `&lt;`                    | 
-| &gt;             | `>`                 | `>`                   | `>`             | `&gt;`                    | 
-| &#039;           | `'`                 | `'`                   | `'`             | `&#039;`                  | 
-| &lt;             | `"`                 | `"`                   | `"`             | `&quot;`                  | 
-| &lt;             | `&`                 | `&`                   | `&`             | `&amp;`                   | 
+| <                | `<`                 | `<`                   | `<`             | `&lt;`                    | 
+| >                | `>`                 | `>`                   | `>`             | `&gt;`                    | 
+| '                | `'`                 | `'`                   | `'`             | `&#039;`                  | 
+| "                | `"`                 | `"`                   | `"`             | `&quot;`                  | 
+| &                | `&`                 | `&`                   | `&`             | `&amp;`                   | 
 | Link             | `[[text@url]]`      | `[text](url)`         | `[[url][text]]` | `<a href="url">text</a>`  |
 | Image            | `[[alt!title!url]]` | `![alt](url "title")` | `[[file:url]]`  | `<img src="url" alt="alt" title="title" />`|
 | Ruby             | `[[漢 字\|かん じ]]`  | -                     | -               | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
