@@ -20,6 +20,11 @@ A lightweight markup language.
 | SubScript        | `Sub_{2}`           | `Sub<sub>2</sub>`     | `Sub_{2}`       | `Sub<sub>2</sub>`         |
 | SingleQuote      | `''Single''`        | `&lsquo;Single&rsquo;`| `'Single'`      | `&lsquo;Single&rsquo;`    |
 | DoubleQuote      | `""Double""`        | `&ldquo;Double&rdquo;`| `"Double"`      | `&ldquo;Double&rdquo;`    |
+| &lt;             | `<`                 | `<`                   | `<`             | `&lt;`                    | 
+| &gt;             | `>`                 | `>`                   | `>`             | `&gt;`                    | 
+| &#039;           | `'`                 | `'`                   | `'`             | `&#039;`                  | 
+| &lt;             | `"`                 | `"`                   | `"`             | `&quot;`                  | 
+| &lt;             | `&`                 | `&`                   | `&`             | `&amp;`                   | 
 | Link             | `[[text@url]]`      | `[text](url)`         | `[[url][text]]` | `<a href="url">text</a>`  |
 | Image            | `[[alt!title!url]]` | `![alt](url "title")` | `[[file:url]]`  | `<img src="url" alt="alt" title="title" />`|
 | Ruby             | `[[漢 字\|かん じ]]`  | -                     | -               | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
@@ -29,12 +34,21 @@ A lightweight markup language.
 
 #### Heading
 ```
-= h1
-== h2
-=== h3
-==== h4
-===== h5
-====== h6
+= head 1
+== head 2
+=== head 3
+==== head 4
+===== head 5
+====== head 6
+```
+
+```
+<h1>head 1</h1>
+<h2>head 2</h2>
+<h3>head 3</h3>
+<h4>head 4</h4>
+<h5>head 5</h5>
+<h6>head 6</h6>
 ```
 
 #### Horizontal Rule
@@ -42,9 +56,17 @@ A lightweight markup language.
 ---
 ```
 
+```
+<hr />
+```
+
 #### Comment
 ```
 # comment
+```
+
+```
+<!-- comment -->
 ```
 
 ### Block
@@ -56,12 +78,24 @@ A lightweight markup language.
 """
 ```
 
+```
+<blockquote>
+
+</blockquote>
+```
+
 #### Code
 ````
 ```
 
 ```
 ````
+
+```
+<code>
+
+</code>
+```
 
 #### Definition List
 ```
