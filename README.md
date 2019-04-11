@@ -178,6 +178,19 @@ term1
 </table>
 ```
 
+#### Footnote
+```
+Lorem ipsum[^1]
+
+[^1]: Dummy text.
+```
+
+```
+Lorem ipsum<sup><a href="#footnote-1">1</a></sup>
+
+<span id="footnote-1">1. Dummy text</span>
+```
+
 #### TeX
 ```
 $$$
