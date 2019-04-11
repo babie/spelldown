@@ -18,7 +18,7 @@ A lightweight markup language.
 | `Code`           | ``` ``Code`` ```    | `` `Code` ``          | `~Code~`        | `<code>Code</code>`       |
 | Super            | `Super^{2}`         | `Super<sup>2</sup>`   | `Super^{2}`     | `Super<sup>2</sup>`       |
 | Sub              | `Sub_{2}`           | `Sub<sub>2</sub>`     | `Sub_{2}`       | `Sub<sub>2</sub>`         |
-| LeftQuote        | `''LQ''`            | `&lsquo;LQ&rsquo;`    | `'LQ'`          | `&lsquo;LQ&rsquo;`        |
+| LeftSingleQuote  | `''LSQ''`           | `&lsquo;LSQ&rsquo;`   | `'LSQ'`         | `&lsquo;LSQ&rsquo;`       |
 | LeftDoubleQuote  | `""LDQ""`           | `&ldquo;LDQ&rdquo;`   | `"LDQ"`         | `&ldquo;LDQ&rdquo;`       |
 | Link             | `[[text@url]]`      | `[text](url)`         | `[[url][text]]` | `<a href="url">text</a>`  |
 | Image            | `[[alt!title!url]]` | `![alt](url "title")` | `[[file:url]]`  | `<img src="url" alt="alt" title="title" />`|
