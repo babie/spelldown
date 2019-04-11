@@ -16,10 +16,10 @@ A lightweight markup language.
 | <u>Underline</u> | `__Underline__`     | `<u>Underline</u>`    | `_Underline_`   | `<u>Underline</u>`        |
 | ~~Delete~~       | `~~Delete~~`        | `~~Delete~~`          | `+Delete+`      | `<del>Delete</del>`       |
 | `Code`           | ``` ``Code`` ```    | `` `Code` ``          | `~Code~`        | `<code>Code</code>`       |
-| Super            | `Super^{2}`         | `Super<sup>2</sup>`   | `Super^{2}`     | `Super<sup>2</sup>`       |
-| Sub              | `Sub_{2}`           | `Sub<sub>2</sub>`     | `Sub_{2}`       | `Sub<sub>2</sub>`         |
-| LeftSingleQuote  | `''LSQ''`           | `&lsquo;LSQ&rsquo;`   | `'LSQ'`         | `&lsquo;LSQ&rsquo;`       |
-| LeftDoubleQuote  | `""LDQ""`           | `&ldquo;LDQ&rdquo;`   | `"LDQ"`         | `&ldquo;LDQ&rdquo;`       |
+| SuperScript      | `Super^{2}`         | `Super<sup>2</sup>`   | `Super^{2}`     | `Super<sup>2</sup>`       |
+| SubScript        | `Sub_{2}`           | `Sub<sub>2</sub>`     | `Sub_{2}`       | `Sub<sub>2</sub>`         |
+| SingleQuote      | `''Single''`        | `&lsquo;Single&rsquo;`| `'Single'`      | `&lsquo;Single&rsquo;`    |
+| DoubleQuote      | `""Double""`        | `&ldquo;Double&rdquo;`| `"Double"`      | `&ldquo;Double&rdquo;`    |
 | Link             | `[[text@url]]`      | `[text](url)`         | `[[url][text]]` | `<a href="url">text</a>`  |
 | Image            | `[[alt!title!url]]` | `![alt](url "title")` | `[[file:url]]`  | `<img src="url" alt="alt" title="title" />`|
 | Ruby             | `[[漢 字\|かん じ]]`  | -                     | -               | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
