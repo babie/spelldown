@@ -27,12 +27,6 @@ A lightweight markup language.
 
 ### Line
 
-#### Comment
-```
-# comment
-```
-
-
 #### Heading
 ```
 = h1
@@ -48,23 +42,28 @@ A lightweight markup language.
 ---
 ```
 
+#### Comment
+```
+# comment
+```
+
 ### Block
 
-#### blockquote
+#### BlockQuote
 ```
->>>
+"""
 
-<<<
+"""
 ```
 
-#### code
+#### Code
 ````
 ```
 
 ```
 ````
 
-#### dl,dt,dd
+#### Definition List
 ```
 term1::
   def1 ...
@@ -72,24 +71,49 @@ term2::
   def2 ...
 ```
 
-#### ul,ol,li
 ```
-- ol1
-- ol2
-  1. ul1
-  2. ul2
-  3. ul3
-- ol3
+<dl>
+  <dt>term1</dt>
+  <dd>def1 ...</dd>
+  <dt>term2</dt>
+  <dd>def2 ...</dd>
+</dl>
+term1
 ```
 
-## Optional
+#### List
+```
+- 1
+- 2
+  + 2-1
+  + 2-2
+    - 2-2-1
+    - 2-2-2
+    - 2-2-3
+  + 2-3
+- 3
+```
 
-### MathML(TeX)
+```
+<ul>
+  <li>1</li>
+  <li><ol>
+    <li>2-1</li>
+    <li>2-2</li>
+    <li><ul>
+      <li>2-2-1</li>
+      <li>2-2-2</li>
+      <li>2-2-3</li>
+    </ul></li>
+    <li>2-3</li>
+  </ol></li>
+  <li>3</li>
+</ul>
+```
 
-`$hoge$`
-
+### TeX
 ```
 $$$
-hoge
+
 $$$
 ```
