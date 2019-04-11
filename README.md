@@ -32,7 +32,7 @@ A lightweight markup language.
 | DoubleQuote      | `""Double""`       | `&ldquo;Double&rdquo;`| `"Double"`      | `&ldquo;Double&rdquo;`    |
 | Link             | `@[text](url)`     | `[text](url)`         | `[[url][text]]` | `<a href="url">text</a>`  |
 | Image            | `![alt](url)`      | `![alt](url)`         | `[[file:url]]`  | `<img src="url" alt="alt" />`|
-| Ruby             | `[漢 字]{かん じ}`   | N/A                   | N/A             | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>`|
+| Ruby             | `[漢 字]^{かん じ}`  | N/A                   | N/A             | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>`|
 | TeX              | `$$           $$`  | N/A                   | `$           $` |                           |
 
 ### Line
