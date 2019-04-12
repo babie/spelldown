@@ -113,17 +113,17 @@ line3</p>
 #### Definition List
 ```
 term1::
-  def1 ...
+  def1
 term2::
-  def2 ...
+  def2
 ```
 
 ```
 <dl>
   <dt>term1</dt>
-  <dd>def1 ...</dd>
+  <dd>def1</dd>
   <dt>term2</dt>
-  <dd>def2 ...</dd>
+  <dd>def2</dd>
 </dl>
 term1
 ```
