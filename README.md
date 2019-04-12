@@ -122,21 +122,15 @@ line3</p>
 
 #### Code
 ````
-```ruby:foo.rb
+```ruby
 [1..100].each do |i|
   puts i
 end
 ```
 ````
 
-```ruby:foo.rb
-[1..100].each do |i|
-  puts i
-end
 ```
-
-```
-<code>
+<code class="highlight highlight-source-ruby">
 [1..100].each do |i|
   puts i
 end
