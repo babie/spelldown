@@ -110,13 +110,13 @@ line3</p>
 #### BlockQuote
 ```
 """
-
+Lorem ipsum ...
 """
 ```
 
 ```
 <blockquote>
-
+Lorem ipsum ...
 </blockquote>
 ```
 
