@@ -8,6 +8,28 @@ A lightweight markup language for ebook.
 
 ## Syntax
 
+### Escape
+```
+\**Strong\**
+\[[text]]@http://example.com
+```
+
+```
+Strong
+[[text]]@http://example.com
+```
+
+### UnEscape
+```
+\\**Strong**
+\\[[text]]@http://example.com
+```
+
+```
+\<strong>Strong</strong>
+\<a href="http://example.com">text</a>
+```
+
 ### Character
 | Content          | Spelldown           | Markdown              | Org             | HTML                      |
 |------------------|---------------------|-----------------------|-----------------|---------------------------|
