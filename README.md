@@ -54,9 +54,10 @@ Strong
 | Link        | `[[text]]@url`      | `[text](url)`         | `[[url][text]]` | `<a href="url">text</a>`  |
 | Image       | `[[alt]]&url`       | `![alt](url)`         | `[[file:url]]`  | `<img src="url" alt="alt" />`       |
 | Ruby        | `[[漢 字\|かん じ]]`  | N/A                   | N/A             | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
+| Math(TeX)   | `$$           $$`   | N/A                   | `$           $` |                           |
+| Tag         | `[[{span}area]]`    | N/A                   | N/A             | `<span>area</span>`         |
 | ID          | `[[{#id}area]]`     | N/A                   | N/A             | `<span id="id">area</span>`         |
 | Class       | `[[{.class}area]]`  | N/A                   | N/A             | `<span class="class">area</span>`   |
-| TeX         | `$$           $$`   | N/A                   | `$           $` |                           |
 | Shell       | `[[area]]!(cmd foo bar)`   | N/A            |                 |                           |
 | Function    | `[[area]]!!(func arg1:foo)`| N/A            |                 |                           |
 
@@ -121,14 +122,24 @@ line3</p>
 
 #### Code
 ````
-```
-
+```ruby:foo.rb
+[1..100].each do |i|
+  puts i
+end
 ```
 ````
 
+```ruby:foo.rb
+[1..100].each do |i|
+  puts i
+end
+```
+
 ```
 <code>
-
+[1..100].each do |i|
+  puts i
+end
 </code>
 ```
 
@@ -230,6 +241,26 @@ Lorem ipsum[^1]
 <p><span id="footnote-1">1. Dummy text</span></p>
 ```
 
+#### Math(TeX)
+```
+$$$
+
+$$$
+```
+
+#### Tag
+```
+[[[{section}
+Lorem ipsum ...
+]]]
+```
+
+```
+<section>
+  <p>Lorem ipsum ...</p>
+</section>
+```
+
 #### ID
 ```
 [[[{#id}
@@ -238,7 +269,9 @@ Lorem ipsum ...
 ```
 
 ```
-<p id="id">Lorem ipsum ...</p>
+<div id="id">
+  <p>Lorem ipsum ...</p>
+</div>
 ```
 
 #### Class
@@ -249,14 +282,9 @@ Lorem ipsum ...
 ```
 
 ```
-<p class="class">Lorem ipsum ...</p>
-```
-
-#### TeX
-```
-$$$
-
-$$$
+<div class="class">
+  <p>Lorem ipsum ...</p>
+</div>
 ```
 
 #### Comment
