@@ -78,6 +78,31 @@ A lightweight markup language.
 
 ### Block
 
+#### New Line
+```
+line1
+line2
+line3
+```
+
+```
+<p>line1<br/>
+line2<br/>
+line3</p>
+```
+
+#### Paragraph
+```
+para1
+
+para2
+```
+
+```
+<p>para1</p>
+<p>para2</p>
+```
+
 #### BlockQuote
 ```
 """
