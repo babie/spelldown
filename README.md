@@ -33,8 +33,8 @@ A lightweight markup language.
 | Link        | `[[text@url]]`      | `[text](url)`         | `[[url][text]]` | `<a href="url">text</a>`  |
 | Image       | `![[alt@url]]`      | `![alt](url)`         | `[[file:url]]`  | `<img src="url" alt="alt" />` |
 | Ruby        | `[[漢 字\|かん じ]]`  | N/A                   | N/A             | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
-| ID          | `[[area]]#id`       | N/A                   | N/A             | `<span id="id">area</span>` |
-| Class       | `[[area]].class`    | N/A                   | N/A             | `<span class="class">area</span>` |
+| ID          | `[[area]]{#id}`     | N/A                   | N/A             | `<span id="id">area</span>` |
+| Class       | `[[area]]{.class}   | N/A                   | N/A             | `<span class="class">area</span>` |
 | TeX         | `$$           $$`   | N/A                   | `$           $` |                           |
 
 
@@ -215,6 +215,28 @@ Lorem ipsum[^1]
 <p>Lorem ipsum<sup><a href="#footnote-1">1</a></sup></p>
 
 <p><span id="footnote-1">1. Dummy text</span></p>
+```
+
+#### ID
+```
+[[[{#id}
+Lorem ipsum ...
+]]]
+```
+
+```
+<p id="id">Lorem ipsum ...</p>
+```
+
+#### Class
+```
+[[[{.class}
+Lorem ipsum ...
+]]]
+```
+
+```
+<p class="class">Lorem ipsum ...</p>
 ```
 
 #### TeX
