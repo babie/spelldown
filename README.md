@@ -2,9 +2,9 @@
 A lightweight markup language for ebook.
 
 ## Feature
-- Easy to read and write.
+- Easy to understand and read and write.
 - There's only one way to do it.
-- Don't disturb a plain text.
+- Don't disturb a plain text as much as possible.
 
 ## Syntax
 
