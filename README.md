@@ -1,4 +1,4 @@
-# Spelldown
+# Spellup
 A lightweight markup language for ebook.
 
 ## Feature
@@ -7,7 +7,7 @@ A lightweight markup language for ebook.
 ## Syntax
 
 ### Character
-| Content          | Spelldown           | Markdown              | Org             | HTML                      |
+| Content          | Spellup             | Markdown              | Org             | HTML                      |
 |------------------|---------------------|-----------------------|-----------------|---------------------------|
 | <                | `<`                 | `<`                   | `<`             | `&lt;`                    | 
 | >                | `>`                 | `>`                   | `>`             | `&gt;`                    | 
@@ -16,7 +16,7 @@ A lightweight markup language for ebook.
 | &                | `&`                 | `&`                   | `&`             | `&amp;`                   | 
 
 ### Inline
-| Content     | Spelldown           | Markdown              | Org             | HTML                      |
+| Content     | Spellup             | Markdown              | Org             | HTML                      |
 |-------------|---------------------|-----------------------|-----------------|---------------------------|
 | **Strong**  | `**Strong**`        | `**Strong**`          | `**Strong**`    | `<strong>Strong</strong>` |
 | *Emphasis*  | `//Emphasis//`      | `*Emphasis*`          | `/Emphasis/`    | `<em>Emphasis</em>`       |
