@@ -6,44 +6,6 @@ A lightweight markup language for ebook.
 
 ## Syntax
 
-### Escape
-```
-\**Strong\** and NotStrong
-\**Strong** and NotStrong
-
-\[[text\]]@(http://example.com)
-\[[text]]@(http://example.com)
-```
-
-```
-**Strong** and Not Strong
-**Strong<strong> and Not Strong</strong>
-
-[[text]]@(<a href="http://example.com">http://example.com</a>)
-<<Parse Error>>
-```
-
-### UnEscape
-```
-\\**Strong** and Not Strong
-\\\**Strong** and Not Strong
-\\\\**Strong** and Not Strong
-
-\\[[text\\]]@(http://example.com)
-\\\[[text\\\]]@(http://example.com)
-\\\\[[text\\\\]]@(http://example.com)
-```
-
-```
-\<strong>Strong</strong> and Not Strong
-\**Strong<strong> and Not Strong</strong>
-\\<strong>Strong</strong> and Not Strong
-
-\<a href="http://example.com">text\</a>
-\[[text\]]@(<a href="http://example.com">http://example.com</a>)
-\\<a href="http://example.com">text\\</a>
-```
-
 ### Character
 | Content          | Spelldown           | Markdown              | Org             | HTML                      |
 |------------------|---------------------|-----------------------|-----------------|---------------------------|
@@ -330,3 +292,42 @@ Lorem ipsum ...
 ```
 #!!func arg1:foo arg2:bar
 ```
+
+### Escape
+```
+\**Strong\** and NotStrong
+\**Strong** and NotStrong
+
+\[[text\]]@(http://example.com)
+\[[text]]@(http://example.com)
+```
+
+```
+**Strong** and Not Strong
+**Strong<strong> and Not Strong</strong>
+
+[[text]]@(<a href="http://example.com">http://example.com</a>)
+<<Parse Error>>
+```
+
+### UnEscape
+```
+\\**Strong** and Not Strong
+\\\**Strong** and Not Strong
+\\\\**Strong** and Not Strong
+
+\\[[text\\]]@(http://example.com)
+\\\[[text\\\]]@(http://example.com)
+\\\\[[text\\\\]]@(http://example.com)
+```
+
+```
+\<strong>Strong</strong> and Not Strong
+\**Strong<strong> and Not Strong</strong>
+\\<strong>Strong</strong> and Not Strong
+
+\<a href="http://example.com">text\</a>
+\[[text\]]@(<a href="http://example.com">http://example.com</a>)
+\\<a href="http://example.com">text\\</a>
+```
+
