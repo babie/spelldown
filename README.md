@@ -59,10 +59,10 @@ Strong
 | Ruby        | `[[漢 字\|かん じ]]`  | N/A                   | N/A             | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
 | Math(TeX)   | `$$           $$`   | N/A                   | `$           $` |                           |
 | Comment     | `##comment##`       | `<!-- comment -->`    |                 | `<!-- comment -->`        |
-| Tag         | `[[{span}area]]`    | N/A                   | N/A             | `<span>area</span>`       |
-| Attribute   | `[[{attr=foo}area]]`| N/A                   | N/A             | `<span attr="foo">area</span>`      |
-| ID          | `[[{#id}area]]`     | N/A                   | N/A             | `<span id="id">area</span>`         |
-| Class       | `[[{.class}area]]`  | N/A                   | N/A             | `<span class="class">area</span>`   |
+| Tag         | `[[{span} area]]`    | N/A                  | N/A             | `<span>area</span>`       |
+| Attribute   | `[[{attr=foo} area]]`| N/A                  | N/A             | `<span attr="foo">area</span>`      |
+| ID          | `[[{#id} area]]`     | N/A                  | N/A             | `<span id="id">area</span>`         |
+| Class       | `[[{.class} area]]`  | N/A                  | N/A             | `<span class="class">area</span>`   |
 | Shell       | `[[area]]!(cmd foo bar)`   | N/A            |                 |                           |
 | Function    | `[[area]]!!(func arg1:foo)`| N/A            |                 |                           |
 
