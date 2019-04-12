@@ -61,7 +61,7 @@ Strong
 | Shell       | `[[area]]!(cmd foo bar)`   | N/A            |                 |                           |
 | Function    | `[[area]]!!(func arg1:foo)`| N/A            |                 |                           |
 
-### Block
+### Multiline
 
 #### Heading
 ```
