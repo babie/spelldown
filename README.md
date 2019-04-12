@@ -151,7 +151,6 @@ term2::def2
   <dt>term2</dt>
   <dd>def2</dd>
 </dl>
-term1
 ```
 
 #### List
