@@ -34,7 +34,7 @@ A lightweight markup language.
 | Image       | `![[alt@url]]`      | `![alt](url)`         | `[[file:url]]`  | `<img src="url" alt="alt" />` |
 | Ruby        | `[[漢 字\|かん じ]]`  | N/A                   | N/A             | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
 | ID          | `[[area]]{#id}`     | N/A                   | N/A             | `<span id="id">area</span>` |
-| Class       | `[[area]]{.class}   | N/A                   | N/A             | `<span class="class">area</span>` |
+| Class       | `[[area]]{.class}`  | N/A                   | N/A             | `<span class="class">area</span>` |
 | TeX         | `$$           $$`   | N/A                   | `$           $` |                           |
 
 
