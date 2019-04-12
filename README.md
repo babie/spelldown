@@ -58,7 +58,7 @@ Strong
 | Image       | `[[alt]]=(url)`     | `![alt](url)`         | `[[file:url]]`  | `<img src="url" alt="alt" />`       |
 | Ruby        | `[[漢 字\|かん じ]]`  | N/A                   | N/A             | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
 | Math(TeX)   | `$$           $$`   | N/A                   | `$           $` |                           |
-| Comment     | `##comment##`       | `<!-- comment -->`    |                 | `<!-- comment -->`        |
+| Comment     | `## comment ##`     | `<!-- comment -->`    |                 | `<!-- comment -->`        |
 | Tag         | `[[{span} area]]`    | N/A                  | N/A             | `<span>area</span>`       |
 | Attribute   | `[[{attr=foo} area]]`| N/A                  | N/A             | `<span attr="foo">area</span>`      |
 | ID          | `[[{#id} area]]`     | N/A                  | N/A             | `<span id="id">area</span>`         |
