@@ -1,10 +1,10 @@
 # Spelldown
-A lightweight markup language.
+A lightweight markup language for ebook.
 
 ## Feature
-- For editing ebooks.
-- There's only one way to do it.
 - Easy to read and write.
+- There's only one way to do it.
+- Don't disturb a plain text.
 
 ## Syntax
 
