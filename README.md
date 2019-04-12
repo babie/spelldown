@@ -49,13 +49,14 @@ Strong
 | `Code`      | ``` ``Code`` ```    | `` `Code` ``          | `~Code~`        | `<code>Code</code>`       |
 | SuperScript | `Super^{2}`         | `Super<sup>2</sup>`   | `Super^{2}`     | `Super<sup>2</sup>`       |
 | SubScript   | `Sub_{2}`           | `Sub<sub>2</sub>`     | `Sub_{2}`       | `Sub<sub>2</sub>`         |
-| SingleQuote | `''Single''`        | `&lsquo;Single&rsquo;`| `'Single'`      | `&lsquo;Single&rsquo;`    |
-| DoubleQuote | `""Double""`        | `&ldquo;Double&rdquo;`| `"Double"`      | `&ldquo;Double&rdquo;`    |
+| SingleQuotationMark | `''Single''`| `&lsquo;Single&rsquo;`| `'Single'`      | `&lsquo;Single&rsquo;`    |
+| DoubleQuotationMark | `""Double""`| `&ldquo;Double&rdquo;`| `"Double"`      | `&ldquo;Double&rdquo;`    |
 | Link        | `[[text]]@(url)`    | `[text](url)`         | `[[url][text]]` | `<a href="url">text</a>`  |
-| Image       | `[[alt]]&(url)`     | `![alt](url)`         | `[[file:url]]`  | `<img src="url" alt="alt" />`       |
+| Image       | `[[alt]]=(url)`     | `![alt](url)`         | `[[file:url]]`  | `<img src="url" alt="alt" />`       |
 | Ruby        | `[[漢 字\|かん じ]]`  | N/A                   | N/A             | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
 | Math(TeX)   | `$$           $$`   | N/A                   | `$           $` |                           |
 | Tag         | `[[{span}area]]`    | N/A                   | N/A             | `<span>area</span>`       |
+| Attribute   | `[[{attr=foo}area]]`| N/A                   | N/A             | `<span attr="foo">area</span>`      |
 | ID          | `[[{#id}area]]`     | N/A                   | N/A             | `<span id="id">area</span>`         |
 | Class       | `[[{.class}area]]`  | N/A                   | N/A             | `<span class="class">area</span>`   |
 | Shell       | `[[area]]!(cmd foo bar)`   | N/A            |                 |                           |
@@ -240,6 +241,15 @@ $$$
 $$$
 ```
 
+#### Comment
+```
+# comment
+```
+
+```
+<!-- comment -->
+```
+
 #### Tag
 ```
 [[[{section}
@@ -251,6 +261,19 @@ Lorem ipsum ...
 <section>
   <p>Lorem ipsum ...</p>
 </section>
+```
+
+#### Attribute
+```
+[[[{data-foo=bar }
+Lorem ipsum ...
+]]]
+```
+
+```
+<div data-foo="bar">
+  <p>Lorem ipsum ...</p>
+</div>
 ```
 
 #### ID
@@ -277,15 +300,6 @@ Lorem ipsum ...
 <div class="class">
   <p>Lorem ipsum ...</p>
 </div>
-```
-
-#### Comment
-```
-# comment
-```
-
-```
-<!-- comment -->
 ```
 
 #### Shell
