@@ -51,11 +51,11 @@ Strong
 | SubScript   | `Sub_{2}`           | `Sub<sub>2</sub>`     | `Sub_{2}`       | `Sub<sub>2</sub>`         |
 | SingleQuote | `''Single''`        | `&lsquo;Single&rsquo;`| `'Single'`      | `&lsquo;Single&rsquo;`    |
 | DoubleQuote | `""Double""`        | `&ldquo;Double&rdquo;`| `"Double"`      | `&ldquo;Double&rdquo;`    |
-| Link        | `[[text]]@url`      | `[text](url)`         | `[[url][text]]` | `<a href="url">text</a>`  |
-| Image       | `[[alt]]&url`       | `![alt](url)`         | `[[file:url]]`  | `<img src="url" alt="alt" />`       |
+| Link        | `[[text]]@(url)`    | `[text](url)`         | `[[url][text]]` | `<a href="url">text</a>`  |
+| Image       | `[[alt]]&(url)`     | `![alt](url)`         | `[[file:url]]`  | `<img src="url" alt="alt" />`       |
 | Ruby        | `[[漢 字\|かん じ]]`  | N/A                   | N/A             | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
 | Math(TeX)   | `$$           $$`   | N/A                   | `$           $` |                           |
-| Tag         | `[[{span}area]]`    | N/A                   | N/A             | `<span>area</span>`         |
+| Tag         | `[[{span}area]]`    | N/A                   | N/A             | `<span>area</span>`       |
 | ID          | `[[{#id}area]]`     | N/A                   | N/A             | `<span id="id">area</span>`         |
 | Class       | `[[{.class}area]]`  | N/A                   | N/A             | `<span class="class">area</span>`   |
 | Shell       | `[[area]]!(cmd foo bar)`   | N/A            |                 |                           |
