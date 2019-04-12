@@ -51,8 +51,8 @@ Strong
 | `Code`      | ``` ``Code`` ```    | `` `Code` ``          | `~Code~`        | `<code>Code</code>`       |
 | SuperScript | `Super^{2}`         | `Super<sup>2</sup>`   | `Super^{2}`     | `Super<sup>2</sup>`       |
 | SubScript   | `Sub_{2}`           | `Sub<sub>2</sub>`     | `Sub_{2}`       | `Sub<sub>2</sub>`         |
-| SingleQuotationMark | `''Single''`| `&lsquo;Single&rsquo;`| `'Single'`      | `&lsquo;Single&rsquo;`    |
-| DoubleQuotationMark | `""Double""`| `&ldquo;Double&rdquo;`| `"Double"`      | `&ldquo;Double&rdquo;`    |
+| SingleQuotation | `''Single''`    | `&lsquo;Single&rsquo;`| `'Single'`      | `&lsquo;Single&rsquo;`    |
+| DoubleQuotation | `""Double""`    | `&ldquo;Double&rdquo;`| `"Double"`      | `&ldquo;Double&rdquo;`    |
 | URL         | `http://example.com`| `http://example.com`  |                 |`<a href="example.com">http://example.com</a>`|
 | Link        | `[[text]]@(url)`    | `[text](url)`         | `[[url][text]]` | `<a href="url">text</a>`  |
 | Image       | `[[alt]]=(url)`     | `![alt](url)`         | `[[file:url]]`  | `<img src="url" alt="alt" />`       |
