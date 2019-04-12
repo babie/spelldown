@@ -108,16 +108,19 @@ line2<br/>
 line3</p>
 ```
 
-#### BlockQuote
+#### Quote
 ```
 """
 Lorem ipsum ...
+
+and so on
 """
 ```
 
 ```
 <blockquote>
-Lorem ipsum ...
+<p>Lorem ipsum ...</p>
+<p>and so on</p>
 </blockquote>
 ```
 
