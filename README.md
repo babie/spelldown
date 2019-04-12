@@ -30,10 +30,11 @@ A lightweight markup language.
 | SubScript   | `Sub_{2}`           | `Sub<sub>2</sub>`     | `Sub_{2}`       | `Sub<sub>2</sub>`         |
 | SingleQuote | `''Single''`        | `&lsquo;Single&rsquo;`| `'Single'`      | `&lsquo;Single&rsquo;`    |
 | DoubleQuote | `""Double""`        | `&ldquo;Double&rdquo;`| `"Double"`      | `&ldquo;Double&rdquo;`    |
-| Link        | `[text](url)`       | `[text](url)`         | `[[url][text]]` | `<a href="url">text</a>`  |
-| Image       | `![alt](url)`       | `![alt](url)`         | `[[file:url]]`  | `<img src="url" alt="alt" />` |
-| Ruby        | `[漢 字\|かん じ]`    | N/A                   | N/A             | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
-| ID/Class    | `[text]{#id.class}` | N/A                   | N/A             | `<span id="id" class="class">text</span>` |
+| Link        | `[[text@url]]`      | `[text](url)`         | `[[url][text]]` | `<a href="url">text</a>`  |
+| Image       | `![[alt@url]]`      | `![alt](url)`         | `[[file:url]]`  | `<img src="url" alt="alt" />` |
+| Ruby        | `[[漢 字\|かん じ]]`  | N/A                   | N/A             | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
+| ID          | `[[area]]#id`       | N/A                   | N/A             | `<span id="id">area</span>` |
+| Class       | `[[area]].class`    | N/A                   | N/A             | `<span class="class">area</span>` |
 | TeX         | `$$           $$`   | N/A                   | `$           $` |                           |
 
 
