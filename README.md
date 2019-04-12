@@ -2,8 +2,8 @@
 A lightweight markup language.
 
 ## Feature
-- Don't disturb the plain text.
-- There's Only One Way To Do It.
+- For editing ebooks.
+- There's only one way to do it.
 - Easy to read and write.
 
 ## Syntax
@@ -17,7 +17,6 @@ A lightweight markup language.
 | "                | `"`                 | `"`                   | `"`             | `&quot;`                  | 
 | &                | `&`                 | `&`                   | `&`             | `&amp;`                   | 
 
-
 ### Inline
 | Content     | Spelldown           | Markdown              | Org             | HTML                      |
 |-------------|---------------------|-----------------------|-----------------|---------------------------|
@@ -30,13 +29,12 @@ A lightweight markup language.
 | SubScript   | `Sub_{2}`           | `Sub<sub>2</sub>`     | `Sub_{2}`       | `Sub<sub>2</sub>`         |
 | SingleQuote | `''Single''`        | `&lsquo;Single&rsquo;`| `'Single'`      | `&lsquo;Single&rsquo;`    |
 | DoubleQuote | `""Double""`        | `&ldquo;Double&rdquo;`| `"Double"`      | `&ldquo;Double&rdquo;`    |
-| Link        | `[[text@url]]`      | `[text](url)`         | `[[url][text]]` | `<a href="url">text</a>`  |
-| Image       | `![[alt@url]]`      | `![alt](url)`         | `[[file:url]]`  | `<img src="url" alt="alt" />` |
+| Link        | `[[text]]@url`      | `[text](url)`         | `[[url][text]]` | `<a href="url">text</a>`  |
+| Image       | `![[alt]]@url`      | `![alt](url)`         | `[[file:url]]`  | `<img src="url" alt="alt" />` |
 | Ruby        | `[[漢 字\|かん じ]]`  | N/A                   | N/A             | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
 | ID          | `[[area]]{#id}`     | N/A                   | N/A             | `<span id="id">area</span>` |
 | Class       | `[[area]]{.class}`  | N/A                   | N/A             | `<span class="class">area</span>` |
 | TeX         | `$$           $$`   | N/A                   | `$           $` |                           |
-
 
 ### Block
 
@@ -195,15 +193,6 @@ term1
 <hr />
 ```
 
-#### Comment
-```
-# comment
-```
-
-```
-<!-- comment -->
-```
-
 #### Footnote
 ```
 Lorem ipsum[^1]
@@ -244,4 +233,18 @@ Lorem ipsum ...
 $$$
 
 $$$
+```
+
+#### Comment
+```
+# comment
+```
+
+```
+<!-- comment -->
+```
+
+#### Command
+```
+#!command a1:foo a2:bar
 ```
