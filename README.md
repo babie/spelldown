@@ -141,8 +141,7 @@ end
 ```
 term1::
   def1
-term2::
-  def2
+term2::def2
 ```
 
 ```
