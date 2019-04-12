@@ -7,38 +7,38 @@ A lightweight markup language for ebook.
 ## Syntax
 
 ### Character
-| Content          | Spellup             | Markdown              | Org             | HTML                      |
-|------------------|---------------------|-----------------------|-----------------|---------------------------|
-| <                | `<`                 | `<`                   | `<`             | `&lt;`                    | 
-| >                | `>`                 | `>`                   | `>`             | `&gt;`                    | 
-| '                | `'`                 | `'`                   | `'`             | `&#039;`                  | 
-| "                | `"`                 | `"`                   | `"`             | `&quot;`                  | 
-| &                | `&`                 | `&`                   | `&`             | `&amp;`                   | 
+| Content | Spellup | Markdown | HTML     |
+|---------|---------|----------|----------|
+| <       | `<`     | `<`      | `&lt;`   | 
+| >       | `>`     | `>`      | `&gt;`   | 
+| '       | `'`     | `'`      | `&#039;` | 
+| "       | `"`     | `"`      | `&quot;` | 
+| &       | `&`     | `&`      | `&amp;`  | 
 
 ### Inline
-| Content     | Spellup             | Markdown              | Org             | HTML                      |
-|-------------|---------------------|-----------------------|-----------------|---------------------------|
-| **Strong**  | `**Strong**`        | `**Strong**`          | `**Strong**`    | `<strong>Strong</strong>` |
-| *Emphasis*  | `//Emphasis//`      | `*Emphasis*`          | `/Emphasis/`    | `<em>Emphasis</em>`       |
-| Underline   | `__Underline__`     | `<u>Underline</u>`    | `_Underline_`   | `<u>Underline</u>`        |
-| ~~Delete~~  | `~~Delete~~`        | `~~Delete~~`          | `+Delete+`      | `<del>Delete</del>`       |
-| `Code`      | ``` ``Code`` ```    | `` `Code` ``          | `~Code~`        | `<code>Code</code>`       |
-| SuperScript | `Super^{2}`         | `Super<sup>2</sup>`   | `Super^{2}`     | `Super<sup>2</sup>`       |
-| SubScript   | `Sub_{2}`           | `Sub<sub>2</sub>`     | `Sub_{2}`       | `Sub<sub>2</sub>`         |
-| SingleQuotation | `''Single''`    | `&lsquo;Single&rsquo;`| `'Single'`      | `&lsquo;Single&rsquo;`    |
-| DoubleQuotation | `""Double""`    | `&ldquo;Double&rdquo;`| `"Double"`      | `&ldquo;Double&rdquo;`    |
-| URL         | `http://example.com`| `http://example.com`  |                 |`<a href="example.com">http://example.com</a>`|
-| Link        | `[[text]]@(url)`    | `[text](url)`         | `[[url][text]]` | `<a href="url">text</a>`  |
-| Image       | `[[alt]]=(url)`     | `![alt](url)`         | `[[file:url]]`  | `<img src="url" alt="alt" />`       |
-| Ruby        | `[[漢 字\|かん じ]]`  | N/A                   | N/A             | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
-| Math(TeX)   | `$$           $$`   | N/A                   | `$           $` |                           |
-| Comment     | `## comment ##`     | `<!-- comment -->`    |                 | `<!-- comment -->`        |
-| Tag         | `[[{span} area]]`    | N/A                  | N/A             | `<span>area</span>`       |
-| Attribute   | `[[{attr=foo} area]]`| N/A                  | N/A             | `<span attr="foo">area</span>`      |
-| ID          | `[[{#id} area]]`     | N/A                  | N/A             | `<span id="id">area</span>`         |
-| Class       | `[[{.class} area]]`  | N/A                  | N/A             | `<span class="class">area</span>`   |
-| Shell       | `[[area]]!(cmd foo bar)`   | N/A            |                 |                           |
-| Function    | `[[area]]!!(func arg1:foo)`| N/A            |                 |                           |
+| Content     | Spellup             | Markdown              | HTML                      |
+|-------------|---------------------|-----------------------|---------------------------|
+| **Strong**  | `**Strong**`        | `**Strong**`          | `<strong>Strong</strong>` |
+| *Emphasis*  | `//Emphasis//`      | `*Emphasis*`          | `<em>Emphasis</em>`       |
+| Underline   | `__Underline__`     | `<u>Underline</u>`    | `<u>Underline</u>`        |
+| ~~Delete~~  | `~~Delete~~`        | `~~Delete~~`          | `<del>Delete</del>`       |
+| `Code`      | ``` ``Code`` ```    | `` `Code` ``          | `<code>Code</code>`       |
+| SuperScript | `Super^{2}`         | `Super<sup>2</sup>`   | `Super<sup>2</sup>`       |
+| SubScript   | `Sub_{2}`           | `Sub<sub>2</sub>`     | `Sub<sub>2</sub>`         |
+| SingleQuotation | `''Single''`    | `&lsquo;Single&rsquo;`| `&lsquo;Single&rsquo;`    |
+| DoubleQuotation | `""Double""`    | `&ldquo;Double&rdquo;`| `&ldquo;Double&rdquo;`    |
+| URL         | `http://example.com`| `http://example.com`  |`<a href="example.com">http://example.com</a>`|
+| Link        | `[[text]]@(url)`    | `[text](url)`         | `<a href="url">text</a>`  |
+| Image       | `[[alt]]=(url)`     | `![alt](url)`         | `<img src="url" alt="alt" />`       |
+| Ruby        | `[[漢 字\|かん じ]]`  | N/A                   | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
+| Math(TeX)   | `$$           $$`   | N/A                   |                           |
+| Comment     | `## comment ##`     | `<!-- comment -->`    | `<!-- comment -->`        |
+| Tag         | `[[{span} area]]`    | N/A                  | `<span>area</span>`       |
+| Attribute   | `[[{attr=foo} area]]`| N/A                  | `<span attr="foo">area</span>`      |
+| ID          | `[[{#id} area]]`     | N/A                  | `<span id="id">area</span>`         |
+| Class       | `[[{.class} area]]`  | N/A                  | `<span class="class">area</span>`   |
+| Shell       | `[[area]]!(cmd foo bar)`   | N/A            |                           |
+| Function    | `[[area]]!!(func arg1:foo)`| N/A            |                           |
 
 ### Multiline
 
