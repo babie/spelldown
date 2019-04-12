@@ -38,7 +38,7 @@ A lightweight markup language.
 | TeX         | `$$           $$`   | N/A                   | `$           $` |                           |
 
 
-### Line
+### Block
 
 #### Heading
 ```
@@ -59,25 +59,17 @@ A lightweight markup language.
 <h6>head 6</h6>
 ```
 
-#### Horizontal Rule
+#### Paragraph
 ```
----
+para1
+
+para2
 ```
 
 ```
-<hr />
+<p>para1</p>
+<p>para2</p>
 ```
-
-#### Comment
-```
-# comment
-```
-
-```
-<!-- comment -->
-```
-
-### Block
 
 #### New Line
 ```
@@ -90,18 +82,6 @@ line3
 <p>line1<br/>
 line2<br/>
 line3</p>
-```
-
-#### Paragraph
-```
-para1
-
-para2
-```
-
-```
-<p>para1</p>
-<p>para2</p>
 ```
 
 #### BlockQuote
@@ -204,6 +184,24 @@ term1
     <td>z</td>
   </tr>
 </table>
+```
+
+#### Horizontal Rule
+```
+---
+```
+
+```
+<hr />
+```
+
+#### Comment
+```
+# comment
+```
+
+```
+<!-- comment -->
 ```
 
 #### Footnote
