@@ -11,8 +11,8 @@ A lightweight markup language for ebook.
 \**Strong\** and NotStrong
 \**Strong** and NotStrong
 
-\[[text]]@(http://example.com)
 \[[text\]]@(http://example.com)
+\[[text]]@(http://example.com)
 ```
 
 ```
@@ -20,7 +20,7 @@ A lightweight markup language for ebook.
 **Strong<strong> and Not Strong</strong>
 
 [[text]]@(<a href="http://example.com">http://example.com</a>)
-[[text\]]@(<a href="http://example.com">http://example.com</a>)
+<<Parse Error>>
 ```
 
 ### UnEscape
@@ -29,9 +29,9 @@ A lightweight markup language for ebook.
 \\\**Strong** and Not Strong
 \\\\**Strong** and Not Strong
 
-\\[[text]]@(http://example.com)
-\\\[[text]]@(http://example.com)
-\\\\[[text]]@(http://example.com)
+\\[[text\\]]@(http://example.com)
+\\\[[text\\\]]@(http://example.com)
+\\\\[[text\\\\]]@(http://example.com)
 ```
 
 ```
@@ -39,9 +39,9 @@ A lightweight markup language for ebook.
 \**Strong<strong> and Not Strong</strong>
 \\<strong>Strong</strong> and Not Strong
 
-\<a href="http://example.com">text</a>
-\[[text]]@(<a href="http://example.com">http://example.com</a>)
-\\<a href="http://example.com">text</a>
+\<a href="http://example.com">text\</a>
+\[[text\]]@(<a href="http://example.com">http://example.com</a>)
+\\<a href="http://example.com">text\\</a>
 ```
 
 ### Character
