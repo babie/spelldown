@@ -2,32 +2,34 @@
 A lightweight markup language for ebook.
 
 ## Feature
-- Easy to understand and read and write.
-- There's only one way to do it.
-- Don't disturb a plain text as much as possible.
+- Obviousness over shortness.
 
 ## Syntax
 
 ### Escape
 ```
 \**Strong\**
-\[[text]]@http://example.com
+\[[text]]@(http://example.com)
 ```
 
 ```
 Strong
-[[text]]@http://example.com
+[[text]]@(<a href="http://example.com">http://example.com</a>)
 ```
 
 ### UnEscape
 ```
 \\**Strong**
-\\[[text]]@http://example.com
+\\[[text]]@(http://example.com)
+\\\[[text]]@(http://example.com)
+\\\\[[text]]@(http://example.com)
 ```
 
 ```
 \<strong>Strong</strong>
 \<a href="http://example.com">text</a>
+\[[text]]@(<a href="http://example.com">http://example.com</a>)
+\\<a href="http://example.com">text</a>
 ```
 
 ### Character
@@ -51,6 +53,7 @@ Strong
 | SubScript   | `Sub_{2}`           | `Sub<sub>2</sub>`     | `Sub_{2}`       | `Sub<sub>2</sub>`         |
 | SingleQuotationMark | `''Single''`| `&lsquo;Single&rsquo;`| `'Single'`      | `&lsquo;Single&rsquo;`    |
 | DoubleQuotationMark | `""Double""`| `&ldquo;Double&rdquo;`| `"Double"`      | `&ldquo;Double&rdquo;`    |
+| URL         | `http://example.com`| `http://example.com`  |                 |`<a href="example.com">http://example.com</a>`|
 | Link        | `[[text]]@(url)`    | `[text](url)`         | `[[url][text]]` | `<a href="url">text</a>`  |
 | Image       | `[[alt]]=(url)`     | `![alt](url)`         | `[[file:url]]`  | `<img src="url" alt="alt" />`       |
 | Ruby        | `[[漢 字\|かん じ]]`  | N/A                   | N/A             | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
