@@ -32,8 +32,8 @@ A lightweight markup language for ebook.
 | Link        | `[[text]]@url`      | `[text](url)`         | `[[url][text]]` | `<a href="url">text</a>`  |
 | Image       | `[[alt]]&url`       | `![alt](url)`         | `[[file:url]]`  | `<img src="url" alt="alt" />`       |
 | Ruby        | `[[漢 字\|かん じ]]`  | N/A                   | N/A             | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
-| ID          | `[[area]]{#id}`     | N/A                   | N/A             | `<span id="id">area</span>`         |
-| Class       | `[[area]]{.class}`  | N/A                   | N/A             | `<span class="class">area</span>`   |
+| ID          | `[[{#id}area]]`     | N/A                   | N/A             | `<span id="id">area</span>`         |
+| Class       | `[[{.class}area]]`  | N/A                   | N/A             | `<span class="class">area</span>`   |
 | TeX         | `$$           $$`   | N/A                   | `$           $` |                           |
 | Shell       | `[[area]]!(cmd foo bar)`   | N/A            |                 |                           |
 | Function    | `[[area]]!!(func arg1:foo)`| N/A            |                 |                           |
