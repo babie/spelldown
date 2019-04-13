@@ -63,7 +63,7 @@ A lightweight markup language for ebook.
 | ID        | `<<text>>%(#id)`           | N/A      | `<span id="id">text</span>`                           |
 | Class     | `<<text>>%(.class)`        | N/A      | `<span class="class">text</span>`                     |
 | Shell     | `<<text>>!(cmd --foo bar)` | N/A      | replace by `execSync('echo "text" \| cmd --foo bar')` |
-| Function  | `<<text>>&(func foo:bar)`  | N/A      | replace by `func('text', {foo: "bar"})`               |
+| Function  | `<<text>>&(func foo:bar)`  | N/A      | replace by `func('text', {foo: 'bar'})`               |
 
 ##### Mix and Chain
 ```
@@ -81,9 +81,9 @@ A lightweight markup language for ebook.
 
 <a href="url"><xxx id="aaa" class="bbb" yyy="zzz">text</xxx></a>
 
-<<replace by func(execSync(`echo 'text' | cmd --foo bar`), {buz: "qux"})>>
+<<replace by func(execSync('echo "text" | cmd --foo bar'), {buz: "qux"})>>
 
-<<replace by execSync(`echo ${func('text', {buz: "qux"})} | cmd --foo bar`)>>
+<<replace by execSync(`echo ${func('text', {buz: 'qux'})} | cmd --foo bar`)>>
 ```
 
 ### Multiline
@@ -365,7 +365,7 @@ Lorem ipsum ...
 >>>
 ```
 
-replace by `func('Lorem ipsum ...', {foo: "bar"})`
+replace by `func('Lorem ipsum ...', {foo: 'bar'})`
 
 ### Escape
 ```
