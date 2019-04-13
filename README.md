@@ -16,6 +16,8 @@ A lightweight markup language for ebook.
 | &       | `&`     | `&`      | `&amp;`  | 
 
 ### Inline
+
+#### Basic
 | Content     | Spellup             | Markdown              | HTML                      |
 |-------------|---------------------|-----------------------|---------------------------|
 | **Strong**  | `**Strong**`        | `**Strong**`          | `<strong>Strong</strong>` |
@@ -28,11 +30,15 @@ A lightweight markup language for ebook.
 | SingleQuotation | `''Single''`    | `&lsquo;Single&rsquo;`| `&lsquo;Single&rsquo;`    |
 | DoubleQuotation | `""Double""`    | `&ldquo;Double&rdquo;`| `&ldquo;Double&rdquo;`    |
 | URL         | `http://example.com`| `http://example.com`  |`<a href="example.com">http://example.com</a>`|
-| Link        | `[[text]]@(url)`    | `[text](url)`         | `<a href="url">text</a>`  |
-| Image       | `[[alt]]=(url)`     | `![alt](url)`         | `<img src="url" alt="alt" />`       |
+| Link        | `[[text]]=(url)`    | `[text](url)`         | `<a href="url">text</a>`  |
+| Image       | `[[alt]]@(url)`     | `![alt](url)`         | `<img src="url" alt="alt" />`       |
 | Ruby        | `[[漢 字\|かん じ]]`  | N/A                   | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
 | Math(TeX)   | `$$           $$`   | N/A                   |                           |
 | Comment     | `## comment ##`     | `<!-- comment -->`    | `<!-- comment -->`        |
+
+#### Optional
+| Content     | Spellup              | Markdown              | HTML                      |
+|-------------|----------------------|-----------------------|---------------------------|
 | Tag         | `[[{span} area]]`    | N/A                  | `<span>area</span>`       |
 | Attribute   | `[[{attr=foo} area]]`| N/A                  | `<span attr="foo">area</span>`      |
 | ID          | `[[{#id} area]]`     | N/A                  | `<span id="id">area</span>`         |
@@ -42,7 +48,9 @@ A lightweight markup language for ebook.
 
 ### Multiline
 
-#### Heading
+#### Basic
+
+##### Heading
 ```
 = head 1
 == head 2
@@ -61,7 +69,7 @@ A lightweight markup language for ebook.
 <h6>head 6</h6>
 ```
 
-#### Paragraph
+##### Paragraph
 ```
 para1
 
@@ -73,7 +81,7 @@ para2
 <p>para2</p>
 ```
 
-#### New Line
+##### New Line
 ```
 line1
 line2
@@ -86,7 +94,7 @@ line2<br/>
 line3</p>
 ```
 
-#### Quote
+##### Quote
 ```
 """
 Lorem ipsum ...
@@ -102,7 +110,7 @@ and so on
 </blockquote>
 ```
 
-#### Code
+##### Code
 ````
 ```ruby
 [1..100].each do |i|
@@ -119,7 +127,7 @@ end
 </code>
 ```
 
-#### Definition List
+##### Definition List
 ```
 term1::
   def1
@@ -135,7 +143,7 @@ term2::def2
 </dl>
 ```
 
-#### List
+##### List
 ```
 - 1
 - 2
@@ -179,7 +187,7 @@ term2::def2
 </ul>
 ```
 
-#### Table
+##### Table
 ```
 | 1 | 2 | 3 |
 |---|---|---|
@@ -207,7 +215,7 @@ term2::def2
 </table>
 ```
 
-#### Horizontal Rule
+##### Horizontal Rule
 ```
 ---
 ```
@@ -216,7 +224,7 @@ term2::def2
 <hr />
 ```
 
-#### Footnote
+##### Footnote
 ```
 Lorem ipsum[^1]
 
@@ -229,14 +237,14 @@ Lorem ipsum[^1]
 <p><span id="footnote-1">1. Dummy text</span></p>
 ```
 
-#### Math(TeX)
+##### Math(TeX)
 ```
 $$$
 
 $$$
 ```
 
-#### Comment
+##### Comment
 ```
 # comment
 ```
@@ -245,7 +253,9 @@ $$$
 <!-- comment -->
 ```
 
-#### Tag
+#### Optional
+
+##### Tag
 ```
 [[[{section}
 Lorem ipsum ...
@@ -258,7 +268,7 @@ Lorem ipsum ...
 </section>
 ```
 
-#### Attribute
+##### Attribute
 ```
 [[[{data-foo=bar }
 Lorem ipsum ...
@@ -271,7 +281,7 @@ Lorem ipsum ...
 </div>
 ```
 
-#### ID
+##### ID
 ```
 [[[{#id}
 Lorem ipsum ...
@@ -284,7 +294,7 @@ Lorem ipsum ...
 </div>
 ```
 
-#### Class
+##### Class
 ```
 [[[{.class}
 Lorem ipsum ...
@@ -297,17 +307,19 @@ Lorem ipsum ...
 </div>
 ```
 
-#### Shell
+##### Shell
 ```
 #!cmd foo bar
 ```
 
-#### Function
+##### Function
 ```
 #!!func arg1:foo arg2:bar
 ```
 
 ### Escape
+
+#### Basic
 ```
 \**Strong\** and NotStrong
 \**Strong** and NotStrong
@@ -324,7 +336,7 @@ Lorem ipsum ...
 <<Parse Error>>
 ```
 
-### UnEscape
+#### Complecated Example
 ```
 \\**Strong** and Not Strong
 \\\**Strong** and Not Strong
