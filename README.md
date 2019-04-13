@@ -32,7 +32,7 @@ A lightweight markup language for ebook.
 | Image       | `<<text>>@(url)`    | `![text](url)`        | `<img src="url" alt="text" />`      |
 | Ruby        | `<<漢 字\|かん じ>>`  | N/A                   | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
 | Comment     | `## comment ##`     | `<!-- comment -->`    | `<!-- comment -->`        |
-| Math(TeX)   | `$$           $$`   | N/A                   |                           |
+| Math(TeX)   | `$$ E = mc^{2} $$`  | N/A                   | See KaTeX manual          |
 
 #### Mix and Chain
 ```
@@ -291,9 +291,11 @@ comment
 #### Math(TeX)
 ```
 $$$
-
+E = mc^{2}
 $$$
 ```
+
+See KaTeX manual
 
 #### Optional
 
