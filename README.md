@@ -42,7 +42,7 @@ A lightweight markup language for ebook.
 | ID        | `<<text>>%(#id)`           | N/A      | `<span id="id">text</span>`               |
 | Class     | `<<text>>%(.class)`        | N/A      | `<span class="class">text</span>`         |
 | Shell     | `<<text>>!(cmd --foo bar)` | N/A      | replace by `echo "text" \| cmd --foo bar` |
-| Function  | `<<text>>&(func arg1:foo)` | N/A      | replace by `func("text", {arg1: "foo"})`  |
+| Function  | `<<text>>&(func foo:bar)`  | N/A      | replace by `func("text", {foo: "bar"})`   |
 
 ### Multiline
 
@@ -257,7 +257,7 @@ $$$
 
 ##### Tag
 ```
-<<<%(section)
+<<<%section
 Lorem ipsum ...
 >>>
 ```
@@ -270,7 +270,7 @@ Lorem ipsum ...
 
 ##### Attribute
 ```
-<<<%(foo=bar)
+<<<%foo=bar
 Lorem ipsum ...
 >>>
 ```
@@ -283,7 +283,7 @@ Lorem ipsum ...
 
 ##### ID
 ```
-<<<%(#id)
+<<<%#id
 Lorem ipsum ...
 >>>
 ```
@@ -296,7 +296,7 @@ Lorem ipsum ...
 
 ##### Class
 ```
-<<<%(.class)
+<<<%.class
 Lorem ipsum ...
 >>>
 ```
@@ -309,7 +309,7 @@ Lorem ipsum ...
 
 ##### Shell
 ```
-<<<!(cmd --foo bar)
+<<<!cmd --foo bar
 Lorem ipsum ...
 >>>
 ```
@@ -318,12 +318,12 @@ replace by `echo "Lorem ipsum ..." | cmd --foo bar`
 
 ##### Function
 ```
-<<<&(func foo:bar)
+<<<&func foo:bar
 Lorem ipsum ...
 >>>
 ```
 
-replace by `func("Lorem ipsum ...", {foo: bar})`
+replace by `func("Lorem ipsum ...", {foo: "bar"})`
 
 ### Escape
 ```
