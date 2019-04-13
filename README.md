@@ -34,15 +34,45 @@ A lightweight markup language for ebook.
 | Comment     | `## comment ##`     | `<!-- comment -->`    | `<!-- comment -->`        |
 | Math(TeX)   | `$$           $$`   | N/A                   |                           |
 
+#### Mix and Chain
+```
+<<漢 字\|かん じ>>=(url)
+
+<<foo>>=(link_url)@(image_url)
+
+<<漢 字\|かん じ>>@(image_url)
+```
+
+```
+<a href="url"><ruby>漢<rb>字<rt>かん<rt>じ</ruby></a>
+
+<a href="link_url"><img src="image_url" alt="foo" /></a>
+
+<<Parse Error>>
+```
+
 #### Optional
 | Content   | Spellup                    | Markdown | HTML                                      |
 |-----------|----------------------------|----------|-------------------------------------------|
 | Tag       | `<<text>>%(span)`          | N/A      | `<span>text</span>`                       |
-| Attribute | `<<text>>%(attr=foo)`      | N/A      | `<span attr="foo">text</span>`            |
+| Attribute | `<<text>>%(foo=bar)`       | N/A      | `<span foo="bar">text</span>`             |
 | ID        | `<<text>>%(#id)`           | N/A      | `<span id="id">text</span>`               |
 | Class     | `<<text>>%(.class)`        | N/A      | `<span class="class">text</span>`         |
-| Shell     | `<<text>>!(cmd --foo bar)` | N/A      | replace by `echo "text" \| cmd --foo bar` |
-| Function  | `<<text>>&(func foo:bar)`  | N/A      | replace by `func("text", {foo: "bar"})`   |
+| Shell     | `<<text>>!(cmd --foo bar)` | N/A      | replace by `echo 'text' \| cmd --foo bar` |
+| Function  | `<<text>>&(func foo:bar)`  | N/A      | replace by `func('text', {foo: "bar"})`   |
+
+##### Mix and Chain
+```
+<<text>>%(xxx yyy=zzz #aaa.bbb)=(url)
+
+<<text>>!(cmd --foo bar)&(func baz:qux)
+```
+
+```
+<a href="url"><xxx yyy="zzz" id="aaa" class="bbb">text</xxx></a>
+
+<<replace by func(execSync(`echo 'text' | cmd --foo bar`), {buz: "qux"})>>
+```
 
 ### Multiline
 
@@ -314,7 +344,7 @@ Lorem ipsum ...
 >>>
 ```
 
-replace by `echo "Lorem ipsum ..." | cmd --foo bar`
+replace by `echo 'Lorem ipsum ...' | cmd --foo bar`
 
 ##### Function
 ```
@@ -323,7 +353,7 @@ Lorem ipsum ...
 >>>
 ```
 
-replace by `func("Lorem ipsum ...", {foo: "bar"})`
+replace by `func('Lorem ipsum ...', {foo: "bar"})`
 
 ### Escape
 ```
