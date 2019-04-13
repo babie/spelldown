@@ -38,15 +38,19 @@ A lightweight markup language for ebook.
 ```
 <<漢 字\|かん じ>>=(url)
 
-<<foo>>=(link_url)@(image_url)
+<<foo>>@(image_url)=(link_url)
 
 <<漢 字\|かん じ>>@(image_url)
+
+<<foo>>=(link_url)@(image_url)
 ```
 
 ```
 <a href="url"><ruby>漢<rb>字<rt>かん<rt>じ</ruby></a>
 
 <a href="link_url"><img src="image_url" alt="foo" /></a>
+
+<<Parse Error>>
 
 <<Parse Error>>
 ```
@@ -65,13 +69,21 @@ A lightweight markup language for ebook.
 ```
 <<text>>%(xxx yyy=zzz #aaa.bbb)=(url)
 
+<<text>>%(xxx #aaa.bbb yyy=zzz)=(url)
+
 <<text>>!(cmd --foo bar)&(func baz:qux)
+
+<<text>>&(func baz:qux)!(cmd --foo bar)
 ```
 
 ```
 <a href="url"><xxx yyy="zzz" id="aaa" class="bbb">text</xxx></a>
 
+<a href="url"><xxx id="aaa" class="bbb" yyy="zzz">text</xxx></a>
+
 <<replace by func(execSync(`echo 'text' | cmd --foo bar`), {buz: "qux"})>>
+
+<<replace by execSync(`echo ${func('text', {buz: "qux"})} | cmd --foo bar`)>>
 ```
 
 ### Multiline
