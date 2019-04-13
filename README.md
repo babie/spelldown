@@ -56,14 +56,14 @@ A lightweight markup language for ebook.
 ```
 
 #### Optional
-| Content   | Spellup                    | Markdown | HTML                                      |
-|-----------|----------------------------|----------|-------------------------------------------|
-| Tag       | `<<text>>%(span)`          | N/A      | `<span>text</span>`                       |
-| Attribute | `<<text>>%(foo=bar)`       | N/A      | `<span foo="bar">text</span>`             |
-| ID        | `<<text>>%(#id)`           | N/A      | `<span id="id">text</span>`               |
-| Class     | `<<text>>%(.class)`        | N/A      | `<span class="class">text</span>`         |
-| Shell     | `<<text>>!(cmd --foo bar)` | N/A      | replace by `echo 'text' \| cmd --foo bar` |
-| Function  | `<<text>>&(func foo:bar)`  | N/A      | replace by `func('text', {foo: "bar"})`   |
+| Content   | Spellup                    | Markdown | HTML                                                  |
+|-----------|----------------------------|----------|-------------------------------------------------------|
+| Tag       | `<<text>>%(span)`          | N/A      | `<span>text</span>`                                   |
+| Attribute | `<<text>>%(foo=bar)`       | N/A      | `<span foo="bar">text</span>`                         |
+| ID        | `<<text>>%(#id)`           | N/A      | `<span id="id">text</span>`                           |
+| Class     | `<<text>>%(.class)`        | N/A      | `<span class="class">text</span>`                     |
+| Shell     | `<<text>>!(cmd --foo bar)` | N/A      | replace by `execSync('echo "text" \| cmd --foo bar')` |
+| Function  | `<<text>>&(func foo:bar)`  | N/A      | replace by `func('text', {foo: "bar"})`               |
 
 ##### Mix and Chain
 ```
@@ -299,7 +299,7 @@ $$$
 
 ##### Tag
 ```
-<<<%section
+<<< % section
 Lorem ipsum ...
 >>>
 ```
@@ -312,7 +312,7 @@ Lorem ipsum ...
 
 ##### Attribute
 ```
-<<<%foo=bar
+<<< % foo=bar
 Lorem ipsum ...
 >>>
 ```
@@ -325,7 +325,7 @@ Lorem ipsum ...
 
 ##### ID
 ```
-<<<%#id
+<<< % #id
 Lorem ipsum ...
 >>>
 ```
@@ -338,7 +338,7 @@ Lorem ipsum ...
 
 ##### Class
 ```
-<<<%.class
+<<< % .class
 Lorem ipsum ...
 >>>
 ```
@@ -351,16 +351,16 @@ Lorem ipsum ...
 
 ##### Shell
 ```
-<<<!cmd --foo bar
+<<< ! cmd --foo bar
 Lorem ipsum ...
 >>>
 ```
 
-replace by `echo 'Lorem ipsum ...' | cmd --foo bar`
+replace by `execSync('echo "Lorem ipsum ..." | cmd --foo bar')`
 
 ##### Function
 ```
-<<<&func foo:bar
+<<< & func foo:bar
 Lorem ipsum ...
 >>>
 ```
