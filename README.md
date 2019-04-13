@@ -29,20 +29,20 @@ A lightweight markup language for ebook.
 | DoubleQuotation | `""Double""`    | `&ldquo;Double&rdquo;`| `&ldquo;Double&rdquo;`    |
 | URL         | `http://example.com`| `http://example.com`  |`<a href="example.com">http://example.com</a>`|
 | Link        | `<<text>>=(url)`    | `[text](url)`         | `<a href="url">text</a>`  |
-| Image       | `<<alt>>@(url)`     | `![alt](url)`         | `<img src="url" alt="alt" />`       |
+| Image       | `<<text>>@(url)`    | `![text](url)`        | `<img src="url" alt="text" />`      |
 | Ruby        | `<<漢 字\|かん じ>>`  | N/A                   | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
 | Comment     | `## comment ##`     | `<!-- comment -->`    | `<!-- comment -->`        |
 | Math(TeX)   | `$$           $$`   | N/A                   |                           |
 
 #### Optional
-| Content     | Spellup                     | Markdown | HTML                                |
-|-------------|-----------------------------|----------|-------------------------------------|
-| Tag         | `<<{span} area>>`           | N/A      | `<span>area</span>`                 |
-| Attribute   | `<<{attr=foo} area>>`       | N/A      | `<span attr="foo">area</span>`      |
-| ID          | `<<{#id} area>>`            | N/A      | `<span id="id">area</span>`         |
-| Class       | `<<{.class} area>>`         | N/A      | `<span class="class">area</span>`   |
-| Shell       | `<<area>>!(cmd foo bar)`    | N/A      |                                     |
-| Function    | `<<area>>&(func arg1:foo)` | N/A      |                                     |
+| Content   | Spellup                    | Markdown | HTML                                      |
+|-----------|----------------------------|----------|-------------------------------------------|
+| Tag       | `<<text>>%(span)`          | N/A      | `<span>text</span>`                       |
+| Attribute | `<<text>>%(attr=foo)`      | N/A      | `<span attr="foo">text</span>`            |
+| ID        | `<<text>>%(#id)`           | N/A      | `<span id="id">text</span>`               |
+| Class     | `<<text>>%(.class)`        | N/A      | `<span class="class">text</span>`         |
+| Shell     | `<<text>>!(cmd --foo bar)` | N/A      | replace by `echo "text" \| cmd --foo bar` |
+| Function  | `<<text>>&(func arg1:foo)` | N/A      | replace by `func("text", {arg1: "foo"})`  |
 
 ### Multiline
 
@@ -257,7 +257,7 @@ $$$
 
 ##### Tag
 ```
-<<<{section}
+<<<%(section)
 Lorem ipsum ...
 >>>
 ```
@@ -270,20 +270,20 @@ Lorem ipsum ...
 
 ##### Attribute
 ```
-<<<{data-foo=bar }
+<<<%(foo=bar)
 Lorem ipsum ...
 >>>
 ```
 
 ```
-<div data-foo="bar">
+<div foo="bar">
   <p>Lorem ipsum ...</p>
 </div>
 ```
 
 ##### ID
 ```
-<<<{#id}
+<<<%(#id)
 Lorem ipsum ...
 >>>
 ```
@@ -296,7 +296,7 @@ Lorem ipsum ...
 
 ##### Class
 ```
-<<<{.class}
+<<<%(.class)
 Lorem ipsum ...
 >>>
 ```
@@ -309,13 +309,21 @@ Lorem ipsum ...
 
 ##### Shell
 ```
-#!cmd foo bar
+<<<!(cmd --foo bar)
+Lorem ipsum ...
+>>>
 ```
+
+replace by `echo "Lorem ipsum ..." | cmd --foo bar`
 
 ##### Function
 ```
-#&func arg1:foo arg2:bar
+<<<&(func foo:bar)
+Lorem ipsum ...
+>>>
 ```
+
+replace by `func("Lorem ipsum ...", {foo: bar})`
 
 ### Escape
 ```
