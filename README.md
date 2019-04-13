@@ -235,11 +235,15 @@ Lorem ipsum<<^1>>
 
 #### Comment
 ```
-# comment
+###
+comment
+###
 ```
 
 ```
-<!-- comment -->
+<!--
+comment
+-->
 ```
 
 #### Math(TeX)
