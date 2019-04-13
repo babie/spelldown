@@ -16,8 +16,6 @@ A lightweight markup language for ebook.
 | &       | `&`     | `&`      | `&amp;`  | 
 
 ### Inline
-
-#### Basic
 | Content     | Spellup             | Markdown              | HTML                      |
 |-------------|---------------------|-----------------------|---------------------------|
 | **Strong**  | `**Strong**`        | `**Strong**`          | `<strong>Strong</strong>` |
@@ -30,27 +28,25 @@ A lightweight markup language for ebook.
 | SingleQuotation | `''Single''`    | `&lsquo;Single&rsquo;`| `&lsquo;Single&rsquo;`    |
 | DoubleQuotation | `""Double""`    | `&ldquo;Double&rdquo;`| `&ldquo;Double&rdquo;`    |
 | URL         | `http://example.com`| `http://example.com`  |`<a href="example.com">http://example.com</a>`|
-| Link        | `[[text]]=(url)`    | `[text](url)`         | `<a href="url">text</a>`  |
-| Image       | `[[alt]]@(url)`     | `![alt](url)`         | `<img src="url" alt="alt" />`       |
-| Ruby        | `[[漢 字\|かん じ]]`  | N/A                   | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
-| Math(TeX)   | `$$           $$`   | N/A                   |                           |
+| Link        | `<<text>>=(url)`    | `[text](url)`         | `<a href="url">text</a>`  |
+| Image       | `<<alt>>@(url)`     | `![alt](url)`         | `<img src="url" alt="alt" />`       |
+| Ruby        | `<<漢 字\|かん じ>>`  | N/A                   | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
 | Comment     | `## comment ##`     | `<!-- comment -->`    | `<!-- comment -->`        |
+| Math(TeX)   | `$$           $$`   | N/A                   |                           |
 
 #### Optional
-| Content     | Spellup              | Markdown              | HTML                      |
-|-------------|----------------------|-----------------------|---------------------------|
-| Tag         | `[[{span} area]]`    | N/A                  | `<span>area</span>`       |
-| Attribute   | `[[{attr=foo} area]]`| N/A                  | `<span attr="foo">area</span>`      |
-| ID          | `[[{#id} area]]`     | N/A                  | `<span id="id">area</span>`         |
-| Class       | `[[{.class} area]]`  | N/A                  | `<span class="class">area</span>`   |
-| Shell       | `[[area]]!(cmd foo bar)`   | N/A            |                           |
-| Function    | `[[area]]!!(func arg1:foo)`| N/A            |                           |
+| Content     | Spellup                     | Markdown | HTML                                |
+|-------------|-----------------------------|----------|-------------------------------------|
+| Tag         | `<<{span} area>>`           | N/A      | `<span>area</span>`                 |
+| Attribute   | `<<{attr=foo} area>>`       | N/A      | `<span attr="foo">area</span>`      |
+| ID          | `<<{#id} area>>`            | N/A      | `<span id="id">area</span>`         |
+| Class       | `<<{.class} area>>`         | N/A      | `<span class="class">area</span>`   |
+| Shell       | `<<area>>!(cmd foo bar)`    | N/A      |                                     |
+| Function    | `<<area>>&(func arg1:foo)` | N/A      |                                     |
 
 ### Multiline
 
-#### Basic
-
-##### Heading
+#### Heading
 ```
 = head 1
 == head 2
@@ -69,7 +65,7 @@ A lightweight markup language for ebook.
 <h6>head 6</h6>
 ```
 
-##### Paragraph
+#### Paragraph
 ```
 para1
 
@@ -81,7 +77,7 @@ para2
 <p>para2</p>
 ```
 
-##### New Line
+#### New Line
 ```
 line1
 line2
@@ -94,7 +90,7 @@ line2<br/>
 line3</p>
 ```
 
-##### Quote
+#### Quote
 ```
 """
 Lorem ipsum ...
@@ -110,7 +106,7 @@ and so on
 </blockquote>
 ```
 
-##### Code
+#### Code
 ````
 ```ruby
 [1..100].each do |i|
@@ -127,7 +123,7 @@ end
 </code>
 ```
 
-##### Definition List
+#### Definition List
 ```
 term1::
   def1
@@ -143,7 +139,7 @@ term2::def2
 </dl>
 ```
 
-##### List
+#### List
 ```
 - 1
 - 2
@@ -187,7 +183,7 @@ term2::def2
 </ul>
 ```
 
-##### Table
+#### Table
 ```
 | 1 | 2 | 3 |
 |---|---|---|
@@ -215,7 +211,7 @@ term2::def2
 </table>
 ```
 
-##### Horizontal Rule
+#### Horizontal Rule
 ```
 ---
 ```
@@ -224,11 +220,11 @@ term2::def2
 <hr />
 ```
 
-##### Footnote
+#### Footnote
 ```
-Lorem ipsum[^1]
+Lorem ipsum<<^1>>
 
-[^1]: Dummy text.
+<<^1>>: Dummy text.
 ```
 
 ```
@@ -237,14 +233,7 @@ Lorem ipsum[^1]
 <p><span id="footnote-1">1. Dummy text</span></p>
 ```
 
-##### Math(TeX)
-```
-$$$
-
-$$$
-```
-
-##### Comment
+#### Comment
 ```
 # comment
 ```
@@ -253,13 +242,20 @@ $$$
 <!-- comment -->
 ```
 
+#### Math(TeX)
+```
+$$$
+
+$$$
+```
+
 #### Optional
 
 ##### Tag
 ```
-[[[{section}
+<<<{section}
 Lorem ipsum ...
-]]]
+>>>
 ```
 
 ```
@@ -270,9 +266,9 @@ Lorem ipsum ...
 
 ##### Attribute
 ```
-[[[{data-foo=bar }
+<<<{data-foo=bar }
 Lorem ipsum ...
-]]]
+>>>
 ```
 
 ```
@@ -283,9 +279,9 @@ Lorem ipsum ...
 
 ##### ID
 ```
-[[[{#id}
+<<<{#id}
 Lorem ipsum ...
-]]]
+>>>
 ```
 
 ```
@@ -296,9 +292,9 @@ Lorem ipsum ...
 
 ##### Class
 ```
-[[[{.class}
+<<<{.class}
 Lorem ipsum ...
-]]]
+>>>
 ```
 
 ```
@@ -314,25 +310,23 @@ Lorem ipsum ...
 
 ##### Function
 ```
-#!!func arg1:foo arg2:bar
+#&func arg1:foo arg2:bar
 ```
 
 ### Escape
-
-#### Basic
 ```
 \**Strong\** and NotStrong
 \**Strong** and NotStrong
 
-\[[text\]]=(http://example.com)
-\[[text]]=(http://example.com)
+\<<text\>>=(http://example.com)
+\<<text>>=(http://example.com)
 ```
 
 ```
 **Strong** and Not Strong
 **Strong<strong> and Not Strong</strong>
 
-[[text]]=(<a href="http://example.com">http://example.com</a>)
+<<text>>=(<a href="http://example.com">http://example.com</a>)
 <<Parse Error>>
 ```
 
@@ -342,9 +336,9 @@ Lorem ipsum ...
 \\\**Strong** and Not Strong
 \\\\**Strong** and Not Strong
 
-\\[[text\\]]=(http://example.com)
-\\\[[text\\\]]=(http://example.com)
-\\\\[[text\\\\]]=(http://example.com)
+\\<<text\\>>=(http://example.com)
+\\\<<text\\\>>=(http://example.com)
+\\\\<<text\\\\>>=(http://example.com)
 ```
 
 ```
@@ -353,7 +347,7 @@ Lorem ipsum ...
 \\<strong>Strong</strong> and Not Strong
 
 \<a href="http://example.com">text\</a>
-\[[text\]]=(<a href="http://example.com">http://example.com</a>)
+\<<text\>>=(<a href="http://example.com">http://example.com</a>)
 \\<a href="http://example.com">text\\</a>
 ```
 
