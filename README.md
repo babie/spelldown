@@ -23,8 +23,8 @@ A lightweight markup language for ebook.
 | Underline   | `__Underline__`     | `<u>Underline</u>`    | `<u>Underline</u>`        |
 | ~~Delete~~  | `~~Delete~~`        | `~~Delete~~`          | `<del>Delete</del>`       |
 | `Code`      | ``` ``Code`` ```    | `` `Code` ``          | `<code>Code</code>`       |
-| SuperScript | `Super^{2}`         | `Super<sup>2</sup>`   | `Super<sup>2</sup>`       |
-| SubScript   | `Sub_{2}`           | `Sub<sub>2</sub>`     | `Sub<sub>2</sub>`         |
+| SuperScript | `Super<<^2>>`       | `Super<sup>2</sup>`   | `Super<sup>2</sup>`       |
+| SubScript   | `Sub<<_2>>`         | `Sub<sub>2</sub>`     | `Sub<sub>2</sub>`         |
 | SingleQuotation | `''Single''`    | `&lsquo;Single&rsquo;`| `&lsquo;Single&rsquo;`    |
 | DoubleQuotation | `""Double""`    | `&ldquo;Double&rdquo;`| `&ldquo;Double&rdquo;`    |
 | URL         | `http://example.com`| `http://example.com`  |`<a href="example.com">http://example.com</a>`|
@@ -264,9 +264,9 @@ term2::def2
 
 #### Footnote
 ```
-Lorem ipsum<<^1>>
+Lorem ipsum<<~1>>
 
-<<^1>>: Dummy text.
+<<~1>>: Dummy text.
 ```
 
 ```
