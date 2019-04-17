@@ -1,4 +1,4 @@
-# Spellup
+# Spellior
 A lightweight markup language for ebook.
 
 ## Feature
@@ -7,16 +7,16 @@ A lightweight markup language for ebook.
 ## Syntax
 
 ### Character
-| Content | Spellup | Markdown | HTML     |
-|---------|---------|----------|----------|
-| <       | `<`     | `<`      | `&lt;`   | 
-| >       | `>`     | `>`      | `&gt;`   | 
-| '       | `'`     | `'`      | `&#039;` | 
-| "       | `"`     | `"`      | `&quot;` | 
-| &       | `&`     | `&`      | `&amp;`  | 
+| Content | Spellior | Markdown | HTML     |
+|---------|----------|----------|----------|
+| <       | `<`      | `<`      | `&lt;`   | 
+| >       | `>`      | `>`      | `&gt;`   | 
+| '       | `'`      | `'`      | `&#039;` | 
+| "       | `"`      | `"`      | `&quot;` | 
+| &       | `&`      | `&`      | `&amp;`  | 
 
 ### Inline
-| Content     | Spellup             | Markdown              | HTML                      |
+| Content     | Spellior            | Markdown              | HTML                      |
 |-------------|---------------------|-----------------------|---------------------------|
 | **Strong**  | `**Strong**`        | `**Strong**`          | `<strong>Strong</strong>` |
 | *Emphasis*  | `//Emphasis//`      | `*Emphasis*`          | `<em>Emphasis</em>`       |
@@ -56,7 +56,7 @@ A lightweight markup language for ebook.
 ```
 
 #### Optional
-| Content   | Spellup                    | Markdown | HTML                                                  |
+| Content   | Spellior                   | Markdown | HTML                                                  |
 |-----------|----------------------------|----------|-------------------------------------------------------|
 | Tag       | `<<text>>%(span)`          | N/A      | `<span>text</span>`                                   |
 | Attribute | `<<text>>%(foo=bar)`       | N/A      | `<span foo="bar">text</span>`                         |
