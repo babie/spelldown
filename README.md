@@ -270,9 +270,9 @@ Lorem ipsum<<~1>>
 ```
 
 ```
-<p>Lorem ipsum<sup><a href="#footnote-1">1</a></sup></p>
+<p>Lorem ipsum<sup><a id="footnote-1-caller" href="#footnote-1-callee">1</a></sup></p>
 
-<p><span id="footnote-1">1. Dummy text</span></p>
+<p><a id="footnote-1-callee" href="#footnote-1-caller">1.</a> Dummy text</p>
 ```
 
 #### Comment
