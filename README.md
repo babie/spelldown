@@ -42,7 +42,7 @@ A lightweight markup language for ebook.
 
 <<漢 字||かん じ==link_url@@image_url>>
 
-<<foo@@image_url==link_url@@image_url>>
+<<foo==link_url@@image_url>>
 ```
 
 ```
