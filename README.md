@@ -28,21 +28,21 @@ A lightweight markup language for ebook.
 | SingleQuotation | `''Single''`    | `&lsquo;Single&rsquo;`| `&lsquo;Single&rsquo;`    |
 | DoubleQuotation | `""Double""`    | `&ldquo;Double&rdquo;`| `&ldquo;Double&rdquo;`    |
 | URL         | `http://example.com`| `http://example.com`  |`<a href="example.com">http://example.com</a>`|
-| Link        | `<<text>>=(url)`    | `[text](url)`         | `<a href="url">text</a>`  |
-| Image       | `<<text>>@(url)`    | `![text](url)`        | `<img src="url" alt="text" />`      |
-| Ruby        | `<<漢 字\|かん じ>>`  | N/A                   | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
+| Link        | `<<text==url>>`     | `[text](url)`         | `<a href="url">text</a>`  |
+| Image       | `<<text@@url>>`     | `![text](url)`        | `<img src="url" alt="text" />`      |
+| Ruby        | `<<漢 字\|\|かん じ>>`| N/A                   | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
 | Comment     | `## comment ##`     | `<!-- comment -->`    | `<!-- comment -->`        |
 | Math(TeX)   | `$$ E = mc^{2} $$`  | N/A                   | See KaTeX manual          |
 
 #### Mix and Chain
 ```
-<<漢 字\|かん じ>>=(url)
+<<漢 字||かん じ==url>>
 
-<<foo>>@(image_url)=(link_url)
+<<foo@@image_url==link_url>>
 
-<<漢 字\|かん じ>>@(image_url)
+<<漢 字||かん じ==link_url@@image_url>>
 
-<<foo>>=(link_url)@(image_url)
+<<foo@@image_url==link_url@@image_url>>
 ```
 
 ```
@@ -52,33 +52,29 @@ A lightweight markup language for ebook.
 
 <<Parse Error>>
 
-<<Parse Error>>
+<a href="link_url"><img src="image_url" alt="foo" /></a>
 ```
 
 #### Optional
 | Content   | Spellior                   | Markdown | HTML                                                  |
 |-----------|----------------------------|----------|-------------------------------------------------------|
-| Tag       | `<<text>>%(span)`          | N/A      | `<span>text</span>`                                   |
-| Attribute | `<<text>>%(foo=bar)`       | N/A      | `<span foo="bar">text</span>`                         |
-| ID        | `<<text>>%(#id)`           | N/A      | `<span id="id">text</span>`                           |
-| Class     | `<<text>>%(.class)`        | N/A      | `<span class="class">text</span>`                     |
-| Shell     | `<<text>>!(cmd --foo bar)` | N/A      | replace by `execSync('echo "text" \| cmd --foo bar')` |
-| Function  | `<<text>>&(func foo:bar)`  | N/A      | replace by `func('text', {foo: 'bar'})`               |
+| Tag       | `<<text%%span>>`           | N/A      | `<span>text</span>`                                   |
+| Attribute | `<<text%%foo=bar>>`        | N/A      | `<span foo="bar">text</span>`                         |
+| ID        | `<<text%%#id>>`            | N/A      | `<span id="id">text</span>`                           |
+| Class     | `<<text%%.class>>`         | N/A      | `<span class="class">text</span>`                     |
+| Shell     | `<<text!!cmd --foo bar>>`  | N/A      | replace by `execSync('echo "text" \| cmd --foo bar')` |
+| Function  | `<<text&&func foo:bar>>`   | N/A      | replace by `func('text', {foo: 'bar'})`               |
 
 ##### Mix and Chain
 ```
-<<text>>%(xxx yyy=zzz #aaa.bbb)=(url)
+<<text%%xxx yyy=zzz #aaa.bbb==url>>
 
-<<text>>%(xxx #aaa.bbb yyy=zzz)=(url)
+<<text!!cmd --foo bar&&func baz:qux>>
 
-<<text>>!(cmd --foo bar)&(func baz:qux)
-
-<<text>>&(func baz:qux)!(cmd --foo bar)
+<<text&&func baz:qux!!cmd --foo bar>>
 ```
 
 ```
-<a href="url"><xxx yyy="zzz" id="aaa" class="bbb">text</xxx></a>
-
 <a href="url"><xxx id="aaa" class="bbb" yyy="zzz">text</xxx></a>
 
 <<replace by func(execSync('echo "text" | cmd --foo bar'), {buz: "qux"})>>
@@ -301,7 +297,7 @@ See KaTeX manual
 
 ##### Tag
 ```
-<<< % section
+<<< %% section
 Lorem ipsum ...
 >>>
 ```
@@ -314,7 +310,7 @@ Lorem ipsum ...
 
 ##### Attribute
 ```
-<<< % foo=bar
+<<< %% foo=bar
 Lorem ipsum ...
 >>>
 ```
@@ -327,7 +323,7 @@ Lorem ipsum ...
 
 ##### ID
 ```
-<<< % #id
+<<< %% #id
 Lorem ipsum ...
 >>>
 ```
@@ -340,7 +336,7 @@ Lorem ipsum ...
 
 ##### Class
 ```
-<<< % .class
+<<< %% .class
 Lorem ipsum ...
 >>>
 ```
@@ -353,7 +349,7 @@ Lorem ipsum ...
 
 ##### Shell
 ```
-<<< ! cmd --foo bar
+<<< !! cmd --foo bar
 Lorem ipsum ...
 >>>
 ```
@@ -362,7 +358,7 @@ replace by `execSync('echo "Lorem ipsum ..." | cmd --foo bar')`
 
 ##### Function
 ```
-<<< & func foo:bar
+<<< && func foo:bar
 Lorem ipsum ...
 >>>
 ```
