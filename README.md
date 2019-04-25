@@ -30,7 +30,7 @@ A lightweight markup language for ebook.
 | URL         | `http://example.com`| `http://example.com`  |`<a href="example.com">http://example.com</a>`|
 | Link        | `<<text==url>>`     | `[text](url)`         | `<a href="url">text</a>`  |
 | Image       | `<<text@@url>>`     | `![text](url)`        | `<img src="url" alt="text" />`      |
-| Ruby        | `<<漢 字\|\|かん じ>>`| N/A                   | `<ruby>漢<rb>字<rt>かん<rt>じ</ruby>` |
+| Ruby        | `<<漢 字\|\|かん じ>>`| N/A                   | `<ruby>漢<rp>(</rp><rt>かん</rt><rp>)</rp>字<rp>(</rp><rt>じ</rt><rp>)</rp></ruby>` |
 | Comment     | `## comment ##`     | `<!-- comment -->`    | `<!-- comment -->`        |
 | Math(TeX)   | `$$ E = mc^{2} $$`  | N/A                   | See KaTeX manual          |
 
