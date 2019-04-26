@@ -154,11 +154,9 @@ end
 ````
 
 ```
-<code class="highlight highlight-source-ruby">
-[1..100].each do |i|
+<pre><code class="highlight highlight-source-ruby">[1..100].each do |i|
   puts i
-end
-</code>
+end</code></pre>
 ```
 
 #### Definition List
